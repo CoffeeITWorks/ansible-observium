@@ -1,14 +1,14 @@
 ---
 # tasks file for ansible-observium
-- include: set_facts.yml
+- import_tasks: set_facts.yml
 
-- include: debian.yml
+- import_tasks: debian.yml
   when: ansible_os_family == "Debian"
 
-- include: install.yml
+- import_tasks: install.yml
 
-- include: config.yml
+- import_tasks: config.yml
 
-- include: users.yml
+- import_tasks: users.yml
 
-- include: cron.yml
+- import_tasks: cron.yml
